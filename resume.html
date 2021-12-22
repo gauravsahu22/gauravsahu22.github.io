@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+       .main-content{
+           display:grid;
+           grid-template-columns:300px 700px;
+           min-height: 1000px;
+           width: 90%;
+       }
+       .left-section{
+           background-color:lightslategray;
+           grid-column-start:0px;
+           grid-column-end: 300px;
+       } 
+       .right-section{
+           background-color:lightgray;
+           grid-column-start:300px;
+           grid-column-end:1000px;
+       }
+       .profile-image{
+           padding:1rem;
+           display:block;
+           margin:auto;
+           align-items: center;
+           border:5px solid white;
+           border-radius: 30%;
+           width:60%
+        }
+        .name{
+            font-size: medium;
+            text-align:center;
+            padding: 0.8em;
+            text-transform: uppercase;
+        }
+        .designation{
+         font-size: 1rem;
+         text-align: center;
+         text-transform: uppercase;
+         border-bottom:1px  solid black;
+         padding-bottom:0.5rem;
+
+        }
+        .description{
+          font-size: 0.75rem;
+          text-align: center;
+          padding: 1rem;
+       }
+       .fa {
+       padding: 10px;
+       font-size: 20px;
+       width: 40px;
+       text-align: center;
+       text-decoration: none;
+       margin: 4px 2px;
+       }
+
+      .fa:hover {
+       opacity: 0.7;
+       }
+       .personal{
+           font-size: medium;
+           padding:7px;
+       }
+       .skills{
+           text-align: center;
+           font-size: 0.75rem;
+           text-transform: uppercase;
+           padding: top 1rem;
+           padding-bottom: 1rem;
+           padding-left: 0.5rem;
+           padding-right: 0.5rem;
+        }
+        p{
+            font-size: 15px;
+            margin-left: 5px;
+        }
+        .progress-bar{
+            border:1px solid white;
+            height:4px;
+            width:90%;
+            margin-left: 5px;
+        }
+         .skill{
+            background-color:white;
+            color: white;
+            padding: 1%;
+            text-align: right;
+            font-size: 20px;
+                border-radius: 15px;
+        }
+        .HTML{
+           width: 80%;
+        }
+        .JAVA{
+            width: 60%;
+        }
+        .CSS{
+            width: 70%;
+        }
+        .COMMUNICATION-SKILLS{
+            width: 80%;
+        }
+        .JAVASCRIPT{
+              width: 50%;
+        }
+        .REACT{
+           width:40%;
+        }
+        .MONGODB{
+          width:30%;
+        }
+        .MYSQL{
+          width:20%
+        }
+        .right-main-content{
+            padding-top:2rem;
+            padding-bottom:2rem;
+            padding-left:3rem;
+            padding-right:3rem;
+            background-color:burlywood;
+            height:1000px;
+        }
+        .right-title{
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding:0.5rem;
+            letter-spacing: 1px;
+        }
+        .institute{
+            margin-left: 7px;
+        }
+
+        @media only screen and (max-width: 674px) {
+            .main-content{
+                display:grid;
+            grid-template-columns: repeat(1,1fr);
+            min-height: 1000px;
+           width: 90%;
+             } }
+        
+    </style>
+</head>
+<body>
+   <main class="main-content">
+       <section class="left-section">
+           <div class="left-content">
+               <div >
+            <img class="profile-image" src="C:\Users\DELL\Downloads\gaurav.jpg.jpeg" alt="profile picture"></img> 
+            </div>
+               <div class="name">Gaurav sahu</div>
+               <div class="designation">SDE</div>
+               <div class="description">|Full Stack Developer|</div>
+               <div class="contact-items">
+                   <div class="social-media">
+                    <a href="https://github.com/gauravsahu22/gauravsahu22.github.io" class="fa fa-github"></a>
+                    <a href="https://www.instagram.com/_gauravsahu_/" class="fa fa-instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100004343926684" class="fa fa-facebook"></a>
+                    <a href="https://www.linkedin.com/in/gaurav-sahu-679855132" class="fa fa-linkedin"></a>
+                    <a href="#" class="peronal email">gauravsahu199820@gmail.com</a>
+                    <a href="#" class="personal phone">+917231068310</a><br>
+                    <a href="#" class="personal location">Nadiya gate rawatpur pichhor,gwalior(M.P.)</a>
+                    <h2 class="skills">SKILLS</h2>
+                    <p class=bar-name>HTML</p>
+                    <div class="progress-bar">
+                        <div class="skill HTML"></div>
+                    </div>
+                    <p class=bar-name>CSS</p>
+                    <div class="progress-bar">
+                        <div class="skill CSS"></div>
+                    </div>
+                    <p class=bar-name>JAVA</p>
+                    <div class="progress-bar">
+                        <div class="skill JAVA"></div>
+                    </div>
+                    <p class=bar-name>JAVASCRIPT</p>
+                    <div class="progress-bar">
+                        <div class="skill JAVASCRIPT"></div>
+                    </div>
+                    <p class=bar-name>REACT</p>
+                    <div class="progress-bar">
+                        <div class="skill REACT"></div>
+                    </div>
+                    <p class=bar-name>MONGODB</p>
+                    <div class="progress-bar">
+                        <div class="skill MONGODB"></div>
+                    </div>
+                    <p class=bar-name>MYSQL</p>
+                    <div class="progress-bar">
+                        <div class="skill MYSQL"></div>
+                    </div>
+                    <p class=bar-name>COMMUNICATION SKILLS</p>
+                    <div class="progress-bar">
+                        <div class="skill COMMUNICATION-SKILLS"></div>
+                    </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+       <section class="right-section">
+          <section class="right-main-content">
+              <header class="right-title">about me</header>
+              <p>Self-motivated and hardworking fresher seeking for an opportunity to work in a challenging environment to prove my skills and utilize my knowledge & intelligence in the growth of the organization.I have technical knowledge of software development as well as good command on my communications skills.I am able to handle multiple tasks on a daily basis.I am a dependable person who is great at time management and i use a creative approach to solve problems.being energetic and eager to learn new thinks,i am having experience of working as a part of team and individually during college projects</p>
+               <header class="right-title">Educations</header>
+               <h4 class="institute">Bachelor's of engineering</h4>
+               <p>Completed engineering from Electronics and Communications(ECE) with 74% .</p>
+               <p>Institute of technology and management,Gwalior</p>
+               <p>2016-2020</p>
+               <h4 class="institute">Senior Secondary</h4>
+               <p>senior secondary with govt. boys higher secondary school pichhore with 80%</p>
+               <p>2014-2015</p>
+               <h4 class="institute">High school</h4>
+               <p>High school with govt. boys higher secondary school pichhore with 86%</p>
+               <p>2012-2013</p>
+               <header class="right-title">experience</header>
+               <p>ALL INDIA RADIO: Learnt about the Basics of Broadcasting of Radio.
+                Worked on different module like microphone, STL, Audio console etc.
+   	Develop flowcharts, layouts and documentation to identify requirements   and solutions.
+   	Gain Knowledge of Computer Science fundamentals such as object-oriented design, algorithm design, data structures, problem solving, and complexity analysis .   
+   	Improve my Verbal and written communication skills</p>
+       <header class="right-title">projects</header>
+       <p>•	School Management System by using C++ : It is an application developed in Java which is used to store all the school-related records. It stores information related to students, staff, and teachers using multi-threaded applications using C++.
+        •SURVEY FORM by  using HTML and CSS : Created a simple survey form and then submit the information captured.
+        </p>
+                
+     </section>
+       </section>
+   </main>
+</body>
+</html>
