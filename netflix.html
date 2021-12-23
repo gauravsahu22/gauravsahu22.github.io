@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<head>
+<style> 
+
+    .main-content{
+        display:flex;
+        flex-direction: column;
+        justify-content:baseline;
+        background-color:black;
+     }
+    .grid{
+        border:1px solid black;
+        
+    }
+    .grid1{
+     background-image: url("https://miro.medium.com/max/1400/1*5lyavS59mazOFnb55Z6znQ.png"); 
+     background-image:no-repeat;
+     background-size: cover;
+     height: 700px;
+    }
+    .netflix-logo{
+        position: relative;
+        width: 200px;
+        height:90px;
+    }
+    #multiSelect{
+        position: absolute;
+        top:25px;
+        right: 150px;
+    }
+    .button{
+        position: absolute;
+        top:25px;
+        right:80px;
+        background-color: red;
+    }
+    .heading{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .intro{
+        font-size:3.125rem;
+        color:white;
+        text-align: center;
+        margin-top:150px;
+        margin-left:100px;
+        margin-right: 100px;
+        letter-spacing: 2px;
+    }
+    .description{
+        font-size: x-large;
+        color:white;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #email{
+        text-align:left;
+        width:500px;
+        height:50px;
+    }
+    .email-bar{
+        margin-left:350px;
+    }
+   
+    
+    .button2{
+        background-color: red;
+        font-size: medium;
+        height:55px;
+        color:white;
+    }
+    .label{
+        color:white;
+        text-align: center;
+    }
+    .grid2{
+        background-color: black;
+    }
+    .second{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: center;
+       background-color: black;
+       height:500px;
+       border-bottom: 10px solid gray;
+       border-top:10px solid gray;
+    }
+    
+    .enjoy{
+        font-size: 2.9rem;
+        letter-spacing: 2px;
+        padding-bottom: 10px;
+        color:white;
+        margin-left:25px;
+    }
+    .watch{
+        font-size: 1.8rem;
+        color:white;
+        margin-left: 25px;
+    }
+    .third{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: center;
+       background-color: black;
+       height:500px;
+       border-bottom: 10px solid gray;
+    }
+    .download{
+        font-size: 2.9rem;
+        letter-spacing: 2px;
+        padding-bottom: 10px;
+        color:white;
+        margin-left:25px;
+    }
+    .save{
+        font-size: 1.8rem;
+        color:white;
+        margin-left: 25px;
+    }
+    .fourth{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: center;
+       background-color: black;
+       height:500px;
+       border-bottom: 10px solid gray;
+    }
+    .watch2{
+        font-size: 2.9rem;
+        letter-spacing: 2px;
+        padding-bottom: 10px;
+        color:white;
+        margin-left:40px;
+    }
+    .stream{
+        font-size: 1.8rem;
+        color:white;
+        margin-left: 40px;
+    }
+    .fifth{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-around;
+       align-items: center;
+       background-color: black;
+       height:500px;
+       border-bottom: 10px solid gray;
+    }
+    .create{
+        font-size: 2.9rem;
+        letter-spacing: 2px;
+        padding-bottom: 10px;
+        color:white;
+        margin-left:40px;
+    }
+    .send{
+        font-size: 1.8rem;
+        color:white;
+        margin-left: 40px;
+    }
+    .sixth{
+         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background-color: black;
+        width:100%;
+        border-bottom: 10px solid gray;
+        
+    }
+    .sixth h1{
+        color:white;
+        font-size: 3rem;
+        padding:3rem 0 4rem 0;
+    }
+    summary{
+        color:white;
+        font-size: x-large;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       padding:4px;
+        
+    }
+    .faq-item{
+        color:white;
+        background-color: black;
+        font-size: large;
+        display:flex;
+        flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       margin-left: 30%;
+       margin-right:30%;
+    }
+    .email-bar2{
+       display:flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+        margin-left:50px;
+    }
+    .button3{
+        background-color: red;
+        font-size: medium;
+        height:58px;
+        color:white;
+    }
+    .label2{
+        color:white;
+       align-items: center;
+    }
+    .links{
+        background-color: black;
+        
+        
+    }
+    .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding: 4rem 0;
+
+  }
+   .footer .one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    margin-right: 200px;
+    margin-left: 100px;
+}
+
+
+    .footer .one li a{
+    color: #757575;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 13px;
+    text-decoration: none;
+}
+    .footer .one li{
+    padding: 7px 0;
+}
+    .footer .one li a:hover{
+    border-bottom: 1px solid #757575;
+} 
+     ul{
+    list-style: none;
+}
+     p {
+    color: #757575;
+    margin-left: 140px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+    p a{
+    color: #757575;
+}
+   .india{
+   color: gray;
+   margin-left:135px;
+   padding:5px;
+}
+.email-bar2{
+    padding:20px;
+}
+</style>
+</head>
+<body>
+<div class="main-content">
+    <div class="grid grid1">
+        <img class="netflix-logo" src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png">
+        <select id="multiSelect">
+            <option value="english">English</option>
+            <option value="hindi">Hindi</option> <br>
+            </select>
+        <input class="button" type="button" value="Sign In">
+      <div class="heading"> <h1 class="intro">Unlimited movies, TV shows and more.</h1>
+       <h1 class="description">Watch anywhere. Cancel anytime.</h1>
+       <h3 class="label">Ready to watch? Enter your email to create or restart your membership.</h3>
+      </div>
+       <div class="email-bar"><input type="text" id="email" placeholder="Email address">
+       <input class="button2" type="button" value="Get Started >">
+        </div>
+    </div>
+    <section class="second">
+        <div class="second1">
+            <h1 class="enjoy">Enjoy on your TV.</h1>
+            <p class="watch">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+        </div>
+         <div>
+             <img src="C:\Users\DELL\Desktop\doc\picture1.jpg">
+         </div>
+    </section>
+    <section class="third">
+        <div>
+          <img src="C:\Users\DELL\Desktop\doc\picture3.jpg">
+        </div>
+        <div class="third1">
+            <h2 class="download">Download your shows to watch offline.</h2>
+            <p class="save">Save your favourites easily and always have something to watch.</p>
+        </div>
+
+    </section>
+    <section class="fourth">
+        <div class="fourth1">
+            <h2 class="watch2">Watch everywhere.</h2>
+            <p class="stream">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+        </div>
+        <div>
+            <img src="C:\Users\DELL\Desktop\doc\picture2.jpg">
+        </div>
+    </section>
+   <section class="fifth">
+       <div>
+        <img src="C:\Users\DELL\Desktop\doc\picture4.png">
+       </div>
+       <div>
+           <h2 class="create">Create profiles for children.</h2>
+            <p class="send">Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
+        </div>
+   </section>
+    <section class="sixth">
+        <h1>Frequently Asked Questions</h1>
+        <details open>
+            <summary>WHAT IS NETFLIX ?</summary>
+            <div class="faq-item">
+                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                <br>
+                <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+            
+            </div>
+        </details>
+          <details>
+              <summary>HOW MUCH DOES NETFLIX COSTS ?</summary>
+              <div class="faq-item">
+              <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no contracts.</p>
+              </div>
+          </details>
+          <details>
+            <summary>WHERE CAN I WATCH ?</summary>
+            <div class="faq-item">
+                <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+                <br> 
+                <p>You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+               </div>
+        </details>
+         <details>
+            <summary>HOW DO I CANCEL ?</summary>
+            <div class="faq-item">
+                <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+            </div>
+        </details>
+         <details>
+            <summary>WHAT CAN I WATCH ON NETFLIX?</summary>
+            <div class="faq-item">
+                <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+            </div>
+        </details>
+        <details>
+            <summary>IS NETFLIS GOOD FOR KIDS ?</summary>
+            <div class="faq-item">
+                <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.</p>
+            <br>
+            <br>
+            <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+            </div>
+        </details>
+        <h3 class="label2">Ready to watch? Enter your email to create or restart your membership.</h3>
+        <div class="email-bar2"><input type="text" id="email" placeholder="Email address">
+            <input class="button3" type="button" value="Get Started >">
+             </div>
+    </section>
+    
+    <section>
+        <p>Questions? Call <a href="#">000-800-040-1843</a></p>
+        <footer  class="footer">
+            <div class="one">
+                <ul class="items">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Speed Test</a></li>
+                </ul>
+                <ul class="items">
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Cookies Presferences</a></li>
+                    <li><a href="#">Legal Notices</a></li>
+                </ul>
+                <ul class="items">
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Ways to watch</a></li>
+                    <li><a href="#">Corporate Information</a></li>
+                    <li><a href="#">Only on Netflix</a></li>
+                </ul>
+                <ul class="items">
+                    <li><a href="#">Media Centre</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </footer>
+    
+        <div class="india">netflix india</div>
+    </section>
+</div>
+</body>
+</html
