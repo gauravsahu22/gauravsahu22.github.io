@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bike Rental Website</title>
+        <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+       <style>
+           *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --main-color: #fe5b3d;
+    --second-color: #ffac38;
+    --text-color: #444;
+    --gradient: linear-gradient(#fe5b3d, #ffac38);
+}
+header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index:1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eeeff1;
+    padding: 15px 100px;
+}
+.logo img{
+    width: 40px;
+}
+.navbar{
+    display: flex;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+
+}
+.navbar a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--gradient);
+    position: absolute;
+    bottom: -4px;
+    left:0;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+.header-btn a{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.header-btn .sign-in{
+    background: #474fa0;
+    color:black;
+    border-radius: 0.5rem;
+}
+.header-btn .sign-in:hover{
+    background: var(--main-color);
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    position:relative;
+    background: url(pimages/bikeFinal.jpeg);
+    background-repeat: no-repeat;
+    background-position:center right ;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,lfr);
+}
+.text{
+    margin-left: 50px;
+}
+.text h1{
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    color:antiquewhite;
+
+}
+.text span{
+    color: var(--main-color);
+}
+.text p{
+    margin: 00.5rem 0 1rem;
+    color:aqua;
+    
+}
+.app-stores{
+    display: flex;
+}
+.app-stores img{
+    width: 100px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.form-container form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 100px;
+    background: #fff;
+    padding: 20px ;
+    border-radius: 0.5rem;
+}
+.input-box{
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.input-box span{
+    font-weight: 500;
+
+}
+.input-box input{
+    padding: 7px;
+    outline: none;
+    border: none;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+.form-container form .btn{
+    flex: 1 1 7rem;
+    padding: 10px 35px;
+    border: none;
+    background: #474fa0;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.form-container form .btn:hover{
+    background: var(--main-color);
+
+}
+.heading{
+    text-align: center;
+    margin-top: 40px;
+}
+.heading span{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.heading h1{
+    font-size: 2rem;
+}
+.ride-container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat( auto-fit , minmax(250px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.ride-container .box{
+    text-align: center;
+    padding: 20px;
+}
+.ride-container .box .bx{
+    font-size: 34px;
+    padding: 10px;
+    background: #eeeff1;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+}
+.ride-container .box h2{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.4rem 0 0.5rem;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat( auto-fit , minmax(300px, auto));
+    margin-top: 2rem;
+}
+.services-container .box{
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 41px rgba(0,0, 0, 0.1);
+}
+.services-container .box .box-img{
+    width: 100%;
+    height: 200px;
+}
+.services-container .box .box-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+.services-container .box p{
+    padding: 0 10px;
+    border: 1px solid var(--text-color);
+    width: 58px;
+    border-radius: 0.5rem;
+    margin: 1rem 0 1rem;
+}
+.services-container .box h3{
+    font-weight: 500;
+}
+.services-container .box h2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin: 0.2rem 0 0.5rem;
+}
+.services-container .box h2 span{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.services-container .box .btn{
+    display: flex;
+    justify-content: center;
+    background: #474fa0;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+.services-container .box .btn:hover{
+    background: var(--main-color);
+}
+.reviews-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.rev-img{
+    width: 70px;
+    height: 70px;
+}
+.rev-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--second-color);
+}
+.reviews-container .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 4px 41px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+}
+.reviews-container .box h2{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.5rem;
+}
+.reviews-container .box p{
+    font-style: italic ;
+}
+.reviews-container .box .stars .bx{
+    color: var(--main-color);
+}
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, lfr);
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.about-img img{
+    width: 50%;
+    height:50%;
+    margin-left: 26%;
+}
+.about-text span{
+    font-weight: 500;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+.about-text p{
+    margin: 0.5rem 0 1.4rem;
+}
+.about-text .btn{
+    padding: 10px 20px;
+    background: #474fa0;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.about-text .btn:hover{
+    background: var(--main-color);
+}
+.newsletter{
+    background: linear-gradient(to top right, #fe5b3d , #ffac38);
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+.newsletter h2{
+    color: #fff;
+    font-size: 1.8rem ;
+}
+.newsletter .box{
+    background: #fff;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    padding: 4px 8px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+.newsletter .box input{
+    border: none;
+    outline: none;
+}
+.newsletter .box .btn{
+    background: #474fa0;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 0.5rem;
+}
+       </style>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">
+                <img src="pimages/bike1.jpg" alt="logo">
+            </a>
+            <ul class="navbar">
+                <li> <a  href="#Home">Home</a></li>
+                <li> <a  href="#Ride">Ride</a></li>
+                <li> <a  href="#Services">Services</a></li>
+                <li> <a  href="#About">About</a></li>
+                <li> <a  href="#Reviews">Reviews</a></li>
+             </ul>
+            <div class="header-btn">
+                <a class="sign-up" href="#">Sign Up</a>
+                <a class="sign-in" href="#">Sign In</a>
+            </div>
+        </header>
+        <section class="home" id="home">
+         <div class="text">
+         <h1><span>Looking </span>to<br> rent a bike</h1> 
+         <p>Lorem ipsum dolor sit amet consectetur.</p>           
+         <div class="app-stores">
+            <img src="pimages/app-store1.png" alt="">
+            <img src="pimages/app-store2.png" alt="">
+          </div>
+        </div>
+        <div class="form-container">
+            <form>
+              <div class="input-box">
+                <span>Location</span>
+                <input type="search" placeholder="Search Places">
+              </div>
+              <div class="input-box">
+                <span>Pick-Up Date</span>
+                <input type="date">
+              </div>
+              <div class="input-box">
+               <span>Return Date</span>
+               <input type="date">
+             </div>
+             <input type="submit" class="btn">
+            </form>
+          </div>
+       </section>
+
+       <section class="ride" id="ride">
+        <div class="heading">
+          <span>How It Work</span>
+          <h1>Rent With 3 Easy Steps</h1>
+        </div>
+        <div class="ride-container">
+            <div class="box">
+              <i class="bx bxs-map"></i>
+              <h2>Choose a location</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, deserunt?</p>
+            </div>
+   
+            <div class="box">
+             <i class="bx bxs-calendar-check"></i>
+             <h2>Pick-Up Date</h2>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, deserunt?</p>
+           </div>
+   
+           <div class="box">
+             <i class='bx bx-calendar-star'></i>         
+             <h2>Book A Car</h2>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, deserunt?</p>
+           </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="heading">
+              <span>Best Services</span>
+              <h1>Explore Out Top Deals <br> from Top Rated Dealers</h1>
+            </div>
+            <div class="services-container">
+              <div class="box">
+                <div class="box-img">
+                  <img src="pimages/bike11.jpeg" alt="">
+                </div>
+                <p>2017</p>
+                <h3>2018 Royal Enfeild</h3>
+                <h2>$58500 | $358 <span>/month</span> </h2>
+                <a href="#" class="btn">Rent now</a>
+              </div>
+     
+              <div class="box">
+               <div class="box-img">
+                 <img src="pimages/bike12.jpeg" alt="">
+               </div>
+               <p>2017</p>
+               <h3>2018 Kiago Z</h3>
+               <h2>$58500 | $358 <span>/month</span> </h2>
+               <a href="#" class="btn">Rent now</a>
+             </div>
+     
+             <div class="box">
+               <div class="box-img">
+                 <img src="pimages/bike13.jpeg" alt="">
+               </div>
+               <p>2017</p>
+               <h3>2018 Harley Davidson</h3>
+               <h2>$58500 | $358 <span>/month</span> </h2>
+               <a href="#" class="btn">Rent now</a>
+             </div>
+     
+             <div class="box">
+               <div class="box-img">
+                 <img src="pimages/bike14.jpeg" alt="">
+               </div>
+               <p>2017</p>
+               <h3>2018 Java</h3>
+               <h2>$58500 | $358 <span>/month</span> </h2>
+               <a href="#" class="btn">Rent now</a>
+             </div>
+     
+             <div class="box">
+               <div class="box-img">
+                 <img src="pimages/bike15.jpeg" alt="">
+               </div>
+               <p>2017</p>
+               <h3>2021 Yamaha CBZ </h3>
+               <h2>$58500 | $358 <span>/month</span> </h2>
+               <a href="#" class="btn">Rent now</a>
+             </div>
+     
+             <div class="box">
+               <div class="box-img">
+                 <img src="pimages/bike16.jpeg" alt="">
+               </div>
+               <p>2017</p>
+               <h3>2020 Electric Scooter</h3>
+               <h2>$58500 | $358 <span>/month</span> </h2>
+               <a href="#" class="btn">Rent now</a>
+             </div>
+
+             <div class="box">
+                <div class="box-img">
+                  <img src="pimages/bike17.jpeg" alt="">
+                </div>
+                <p>2017</p>
+                <h3>2020 Morris Garage</h3>
+                <h2>$58500 | $358 <span>/month</span> </h2>
+                <a href="#" class="btn">Rent now</a>
+              </div>
+
+              <div class="box">
+                <div class="box-img">
+                  <img src="pimages/bike18.jpeg" alt="">
+                </div>
+                <p>2017</p>
+                <h3>2020 Mountain Bike</h3>
+                <h2>$58500 | $358 <span>/month</span> </h2>
+                <a href="#" class="btn">Rent now</a>
+              </div>
+     
+            </div>
+          </section>
+          <section class="about" id="about">
+            <div class="heading">
+              <span>About Us</span>
+              <h1>Best Costumer Experience</h1>
+            </div>
+            <div class="about-container">
+               <div class="about-img">
+                <img src="pimages/bike21.jpeg" alt="">
+               </div>
+               <div class="about-text">
+                 <span>About Us</span>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequuntur praesentium reiciendis inventore ratione eaque nam veniam necessitatibus vel quibusdam magni voluptates in iusto, ab, tempora amet? Consequuntur, laboriosam dignissimos nostrum ut veniam assumenda ipsa?
+                 </p>
+                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione vel, officiis laudantium ipsam consequatur nostrum consequuntur laborum tenetur eos cupiditate maiores at architecto minus rem, nobis et voluptatibus? Explicabo, excepturi.</p>
+                 <a href="#" class="btn">Learn More</a>
+               </div>
+             </div>
+          </section>
+
+          <section class="reviews" id="reviews">
+            <div class="heading">
+              <span>Reviews</span>
+              <h1>What Our Costumer Say</h1>
+            </div>
+            <div class="reviews-container">
+              <div class="box">
+                <div class="rev-img">
+                  <img src="pimages/review1.jpg" alt="">
+                </div>
+                <h2>Someone Name</h2>
+                <div class="stars">
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, harum. ipsum dolor sit amet consectetur adipisicing elit. Inventore, minus!</p>
+              </div>
+              
+              <div class="box">
+                <div class="rev-img">
+                  <img src="pimages/review2.jpg" alt="">
+                </div>
+                <h2>Someone Name</h2>
+                <div class="stars">
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, dolore. ipsum dolor sit amet consectetur adipisicing elit. Quo amet voluptatem sunt?</p>
+              </div>
+              
+              <div class="box">
+                <div class="rev-img">
+                  <img src="pimages/review3.jpg" alt="">
+                </div>
+                <h2>Someone Name</h2>
+                <div class="stars">
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star'></i>
+                  <i class='bx bxs-star-half'></i>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque, id? ipsum dolor sit amet consectetur, adipisicing elit. Minus quia ducimus provident, aperiam ratione pariatur.</p>
+              </div>
+            </div>
+           </section>
+           <section class="newsletter">
+            <h2>Subscribe</h2>
+            <div class="box">
+              <input type="text" placeholder="Enter Your Email...">
+              <a href="#" class="btn">Subscribe</a>
+            </div>
+          </section>
+
+     
+    </body>
+    
+</html>
