@@ -15,10 +15,10 @@ function check(){
     quiz.style.display="none";
     
     if(c>=4){
-        result.textContent="Yes";
+        result.textContent=" Result : Yes"+"("+c+")";
     } else if(c<=3 && c>=2){
-        result.textContent="Maybe";
+        result.textContent=" Result : Maybe"+"("+c+")";
     } else{
-        result.textContent="No";
+        result.textContent=" Result : No"+"("+c+")";
     }
   }
