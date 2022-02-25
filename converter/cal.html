@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Number System Converter</h1>
+    <input class="iNum" id="ipNum" placeholder="Enter a Number" />
+    <p>From</p>
+    <select class="iType" id="ipType">
+      <option value="ipbin">Binary</option>
+      <option value="ipoct">Octal</option>
+      <option value="ipdec">Decimal</option>
+      <option value="iphex">Haxadecimal</option>
+    </select>
+    <br />
+    <p>To</p>
+    <select class="oType" id="opType">
+      <option value="opbin">Binary</option>
+      <option value="opoct">Octal</option>
+      <option value="opdec">Decimal</option>
+      <option value="ophex">Hexadecimal</option>
+    </select>
+    <br />
+    <br />
+
+    <button class="btn" onclick="convert()">CONVERT</button>
+    <button class="btn" onclick="swap()">SWAP</button>
+    <br />
+    <br />
+    <input class="oNum" id="opNum" placeholder="Output" />
+    <script src="./cal.js"></script>
+  </body>
+</html>
