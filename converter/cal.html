@@ -5,25 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    
+    <style>
+        #container{
+    border:solid black 5px;
+    background-color: gray;
+    padding:25px;
+    height:300px;
+    width:500px;
+    margin-left:30%;
+    text-align: center;
+    align-items: center;
+
+}
+#heading{
+    margin-left: 30%;
+    color:black;
+}
+    </style>
+
   </head>
   <body>
-    <h1>Number System Converter</h1>
+    <h1 id="heading">Number System Converter</h1>
+   <div id="container">
     <input class="iNum" id="ipNum" placeholder="Enter a Number" />
     <p>From</p>
-    <select class="iType" id="ipType">
-      <option value="ipbin">Binary</option>
-      <option value="ipoct">Octal</option>
-      <option value="ipdec">Decimal</option>
-      <option value="iphex">Haxadecimal</option>
-    </select>
-    <br />
+    <div id="from">
+      <select>
+        <option value="bin">Binary</option>
+        <option value="oct">Octal</option>
+        <option value="dec">Decimal</option>
+        <option value="hex">Haxadecimal</option>
+      </select>
+  </div>
     <p>To</p>
-    <select class="oType" id="opType">
-      <option value="opbin">Binary</option>
-      <option value="opoct">Octal</option>
-      <option value="opdec">Decimal</option>
-      <option value="ophex">Hexadecimal</option>
-    </select>
+    <div id="to">
+      <select>
+        <option value="bin">Binary</option>
+        <option value="oct">Octal</option>
+        <option value="dec">Decimal</option>
+        <option value="hex">Hexadecimal</option>
+      </select>
+    </div>
     <br />
     <br />
 
@@ -32,6 +55,7 @@
     <br />
     <br />
     <input class="oNum" id="opNum" placeholder="Output" />
+ </div>
     <script src="./cal.js"></script>
   </body>
 </html>
